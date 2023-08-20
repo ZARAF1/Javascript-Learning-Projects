@@ -22,3 +22,24 @@ const checkWinner = (dA, kA) => {
 };
 
 checkWinner(dolphinsAverage, koalasAverage);
+
+// coding challenge part 2
+
+const calcTips = (amount) => {
+  let tipAmount;
+  if (amount > 50 && amount < 300) {
+    tipAmount = amount * 0.15;
+  } else {
+    tipAmount = amount * 0.2;
+  }
+  return amount + tipAmount;
+};
+
+const bills = [125, 555, 44];
+const tips = bills.map((element) => {
+  return calcTips(element);
+});
+const totals = bills.map((element) => {
+  return calcTips(element) + element;
+});
+console.log(tips, totals);
