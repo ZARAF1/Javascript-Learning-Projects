@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /*
 ///////////////////////////////////////
@@ -281,7 +281,7 @@ const jonasArray = [
 ];
 
 const jonas = {
-  firstName: 'Jonas',
+  first Name: 'Jonas',
   lastName: 'Schmedtmann',
   age: 2037 - 1991,
   job: 'teacher',
@@ -587,3 +587,24 @@ console.log(calcAverage([2, 3, 7]));
 console.log(calcAverage(totals));
 console.log(calcAverage(tips));
 */
+
+const jonas = {
+  firstName: "Jonas",
+  lastName: "Schmedtmann",
+  birthYeah: 1991,
+  job: "teacher",
+  friends: ["Michael", "Peter", "Steven"],
+  hasDriversLicense: true,
+
+  calcAge: function () {
+    this.age = 2037 - this.birthYeah;
+    return this.age;
+  },
+};
+
+jonas.summary = function () {
+  return `Jonas has ${this.hasDriversLicense ? "a" : "no"} drivers license`;
+};
+jonas.summary(); // 'Jonas has a drivers license'
+jonas.hasDriversLicense = false; // false
+jonas.summary(); // 'Jonas has no drivers license'

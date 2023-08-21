@@ -43,3 +43,32 @@ const totals = bills.map((element) => {
   return calcTips(element) + element;
 });
 console.log(tips, totals);
+
+// coding challenge 3
+const mark = {
+  "full name": "Mark Johnson",
+  mass: 80,
+  height: 1.95,
+  calcBMI() {
+    this.BMI = this.mass / this.height ** 2;
+    return this.BMI;
+  },
+};
+
+const john = {
+  "full name": "John Brickson",
+  mass: 90,
+  height: 1.69,
+  calcBMI() {
+    this.BMI = this.mass / this.height ** 2;
+    return this.BMI;
+  },
+};
+john.calcBMI();
+mark.calcBMI(); // first execute this to get the property john.BMI working
+
+john.BMI > mark.BMI
+  ? console.log(`John's BMI ${john.BMI} is higher than Mark's ${mark.BMI}!"`)
+  : console.log(
+      `Mark's BMI (${mark.BMI}) is higher than John's (${john.BMI})!"`
+    );
