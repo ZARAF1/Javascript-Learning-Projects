@@ -1,4 +1,6 @@
 "use strict";
+
+/** Functions */
 // task 1
 const describeCountry = (country, population, capitalCity) => {
   console.log(
@@ -26,3 +28,10 @@ console.log(pakistan);
 const percentageOfWorld3 = (population) => {
   return (population / 7900) * 100;
 };
+
+/** Arrays */
+//task 1
+const population = new Array(100, 200, 300, 4000);
+console.log(population.length === 4);
+const percentages = population.map(percentageOfWorld);
+console.log(percentages);
