@@ -1,6 +1,14 @@
 // Remember, we're gonna use strict mode in all scripts now!
-'use strict';
+/** How to think like a developer
+ * 1> Understand the problem till its clear and ask questions till its clear
+ * 2> Break the problem down in doable chunks and solve them
+ * 3> Do as much research as possible
+ * 4> Write pseudo code if needed
+ */
 
+'use strict';
+//  How to use google, stackoverflow and mdn to research
+// PROBLEM 1:
 const temperature1 = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
 const temperature2 = [3, -12, -16, -1, 'error', 9, 131, 17, 15, 14, 9, 5];
 
@@ -26,3 +34,5 @@ function calcTempAmplitude(arr1, arr2) {
 }
 let amplitude = calcTempAmplitude(temperature1, temperature2);
 console.log(amplitude);
+
+//
