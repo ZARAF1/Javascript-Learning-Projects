@@ -15,7 +15,6 @@ const temperature2 = [3, -12, -16, -1, 'error', 9, 131, 17, 15, 14, 9, 5];
 function calcTempAmplitude(arr1, arr2) {
   // merge two arrays into one
   let arr = arr1.concat(arr2);
-
   // determine max and min value in an array
   let maxVal = arr[0];
   let minVal = arr[0];
