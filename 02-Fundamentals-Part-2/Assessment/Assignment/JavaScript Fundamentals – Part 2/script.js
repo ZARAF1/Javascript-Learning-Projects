@@ -71,4 +71,16 @@ const myCountry = {
 myCountry.describe();
 myCountry.checkIsland();
 console.log(myCountry.isIsland);
+
 /** Loops */
+// task 1
+for (let i = 1; i < 6; i++) {
+  console.log(`Voter ${i} is currently casting a vote!  `);
+}
+
+const populationsTwo = [100, 200, 300, 4000];
+let percentageOfWorld4 = [];
+for (let i = 0; i < populationsTwo.length; i++) {
+  percentageOfWorld4.push(percentageOfWorld(populationsTwo[i]));
+}
+console.log(percentageOfWorld4);
