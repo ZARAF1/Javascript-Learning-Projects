@@ -7,7 +7,7 @@
  */
 
 'use strict';
-//  How to use google, stackoverflow and mdn to research
+// How to use google, stackoverflow and mdn to research
 // PROBLEM 1:
 const temperature1 = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
 const temperature2 = [3, -12, -16, -1, 'error', 9, 131, 17, 15, 14, 9, 5];
@@ -32,6 +32,18 @@ function calcTempAmplitude(arr1, arr2) {
   return maxVal - minVal;
 }
 let amplitude = calcTempAmplitude(temperature1, temperature2);
-console.log(amplitude);
+console.log('Amplitude is : ' + amplitude);
 
-//
+//Debugging with console
+// Problem 2
+let measureKelvin = () => {
+  const measurement = {
+    type: 'type',
+    unit: 'celsius',
+    value: prompt('Enter celsius value!'),
+  };
+  //console.table(measurement); // logged value to check what value are we receiving from the prompt
+  const kelvin = measurement.value + 273;
+  return kelvin;
+};
+// console.log(measureKelvin());
