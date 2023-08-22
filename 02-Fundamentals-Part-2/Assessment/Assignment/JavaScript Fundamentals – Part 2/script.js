@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 /** Functions */
 // task 1
@@ -7,7 +7,7 @@ const describeCountry = (country, population, capitalCity) => {
     `${country} has ${population} and its capital city is ${capitalCity}`
   );
 };
-describeCountry("Pakistan", 22, "Islamabad");
+describeCountry('Pakistan', 22, 'Islamabad');
 
 // task 2
 function percentageOfWorld(population) {
@@ -25,7 +25,7 @@ const pakistan = percentageOfWorld2(22);
 console.log(pakistan);
 
 // using arrow functions
-const percentageOfWorld3 = (population) => {
+const percentageOfWorld3 = population => {
   return (population / 7900) * 100;
 };
 
@@ -35,3 +35,16 @@ const population = new Array(100, 200, 300, 4000);
 console.log(population.length === 4);
 const percentages = population.map(percentageOfWorld);
 console.log(percentages);
+
+// task 2
+const neighbours = ['india', 'iran', 'afghanistan', 'china'];
+neighbours.push('utopia');
+console.log(neighbours);
+neighbours.pop();
+console.log(neighbours);
+if (!neighbours.includes('Germany')) {
+  console.log(`Probably not a central European country :D`);
+}
+const indiaIndex = neighbours.indexOf('india');
+neighbours[0] = 'Jamaica';
+console.log(neighbours);
