@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript getElementsByClassName</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul id="menu">
+          <li class="item">HTML</li>
+          <li class="item">CSS</li>
+          <li class="item highlight">JavaScript</li>
+          <li class="item">TypeScript</li>
+        </ul>
+      </nav>
+      <h1>getElementsByClassName Demo</h1>
+    </header>
+    <section>
+      <article>
+        <h2 class="secondary">Example 1</h2>
+      </article>
+      <article>
+        <h2 class="secondary">Example 2</h2>
+      </article>
+    </section>
+    <script>
+      // lets select the elements for element ul
+      let ulElement = document.getElementById('menu');
+      let liElements = ulElement.getElementsByClassName('item');
+      // using for loop to iterate over HTML collection
+      for (let i = 0; i < liElements.length; i++) {
+        console.log(`using for loop: ${liElements[i].innerHTML}`);
+      }
+      // using for of loop to iterate over each element
+      for (let element of liElements) {
+        console.log(`Using for of: ${element.innerHTML}`);
+      }
+
+      // converting the HTML collection of liElements to an array using Array.from() and then looping them using array methods
+
+      let liElementsArray = Array.from(liElements);
+      liElementsArray.forEach(element => {
+        console.log(`For each element: ${element.innerHTML}`);
+      });
+
+      // using Array.prototype.map.call(htmlcollection,callback) The map() method creates a new array with the results of calling a provided function on every element in the calling array.
+      let liElementsArrayTwo = Array.prototype.map.call(liElements, element => {
+        console.log(`using Array.prototype.map.call: ${element.innerHTML}`);
+        return element.innerHTML;
+      });
+      console.log(liElementsArrayTwo);
+    </script>
+  </body>
+</html>
