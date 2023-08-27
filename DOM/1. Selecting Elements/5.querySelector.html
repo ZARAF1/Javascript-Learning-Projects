@@ -5,7 +5,7 @@
   </head>
   <body>
     <header>
-      <div id="logo">
+      <div>
         <img src="img/logo.jpg" alt="Logo" id="logo" />
       </div>
       <nav class="primary-nav">
@@ -23,7 +23,7 @@
       <div class="container">
         <section class="section-a">
           <h2>UI/UX</h2>
-          <p>
+          <p class="testpara">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem
             placeat, atque accusamus voluptas laudantium facilis iure adipisci
             ab veritatis eos neque culpa id nostrum tempora tempore minima.
@@ -33,7 +33,7 @@
         </section>
         <section class="section-b">
           <h2>PWA Development</h2>
-          <p>
+          <p class="testpara">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni
             fugiat similique illo nobis quibusdam commodi aspernatur, tempora
             doloribus quod, consectetur deserunt, facilis natus optio. Iure
@@ -43,7 +43,7 @@
         </section>
         <section class="section-c">
           <h2>Mobile App Dev</h2>
-          <p>
+          <p class="testpara">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi eos
             culpa laudantium consequatur ea! Quibusdam, iure obcaecati. Adipisci
             deserunt, alias repellat eligendi odit labore! Fugit iste sit
@@ -52,7 +52,80 @@
           <button>Read More</button>
         </section>
       </div>
+      <div>just for testing child combinators</div>
     </main>
-    <script src="js/main.js"></script>
+    <p id="output"></p>
+    <script>
+      // 1. universal selector
+      let universalElement = document.querySelector('*');
+      console.log({ universalElement }); // gets the <HTML> element
+
+      let universalElements = document.querySelectorAll('*');
+      console.log({ universalElements });
+
+      // 2. type selector
+      let firstHeading = document.querySelector('h1');
+      console.log({ firstHeading });
+
+      let secondHeadings = document.querySelectorAll('h2');
+      console.log({ secondHeadings });
+
+      // 3. Class selector
+      // Example 1 gives the whole element along with its child elements
+      let menuItemUsingClassSelector = document.querySelector('.primary-nav');
+      console.log(menuItemUsingClassSelector);
+      // Example 2 gives the corresponding element which is actually a node object
+      let elementUsingClassSelector = document.querySelector('.testpara');
+      console.log(elementUsingClassSelector);
+      console.log(elementUsingClassSelector.nodeType);
+      console.table(elementUsingClassSelector); // its an object no doubt
+
+      // Example 3:
+      let elementsUsingClassSelector = document.querySelectorAll('.testpara');
+      console.log(elementsUsingClassSelector);
+
+      // 4. ID Selector
+      let elementUsingId = document.querySelector('#logo');
+      console.log(elementUsingId);
+
+      // 5. Attribute Selector
+      let anchorElement = document.querySelector('[href]');
+      console.log(anchorElement);
+
+      let anchorElements = document.querySelectorAll('[href]');
+      console.log(anchorElements);
+
+      // 6. grouping selectors
+      let multipleElements = document.querySelectorAll('p,a,#logo,.testpara');
+      console.log(multipleElements);
+
+      //  7. Combinators
+      // 7.1 Descendant combinator
+      let image = document.querySelector('div img');
+      console.log(image);
+
+      // 7.2 Child combinator
+      let liElement = document.querySelector('ul>li');
+      console.log(liElement);
+
+      let liElements = document.querySelectorAll('ul>li');
+      console.log(liElements);
+
+      // 7.3 General sibling combinator
+      let sibling = document.querySelector('h1~div');
+      console.log(sibling);
+
+      let siblings = document.querySelectorAll('h1~div');
+      console.log(siblings);
+
+      // 7.4 Adjacent sibling combinator
+      let adjacentSibling = document.querySelector('h2+p');
+      console.log(adjacentSibling);
+
+      let adjacentSiblings = document.querySelectorAll('h2+p');
+      console.log(adjacentSiblings);
+
+      // 8. pseudo class : and element ::
+    </script>
   </body>
 </html>
