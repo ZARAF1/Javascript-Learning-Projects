@@ -47,6 +47,15 @@
       for (let i = currentIndexNumber; i < listElementsArray.length; i++) {
         console.log(listElementsArray[i]);
       }
+
+      // get all siblings
+      let childElementsArray = [];
+      let menu = document.querySelectorAll('li');
+      console.log(menu);
+      for (let element of menu) {
+        childElementsArray.push(element.innerHTML);
+      }
+      console.log(childElementsArray);
     </script>
   </body>
 </html>
