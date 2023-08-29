@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="menu">
+      <li>Home</li>
+      <li>Products</li>
+      <li class="current">Customer Support</li>
+      <li>Careers</li>
+      <li>Investors</li>
+      <li>News</li>
+      <li>About Us</li>
+    </ul>
+    <script>
+      let currentElement = document.querySelector('.current');
+      // get next and previous element siblings
+      /*
+       console.log(currentElement.parentNode);
+       console.log(currentElement.nextElementSibling);
+       console.log(currentElement.previousElementSibling);
+       */
+      // get all previous and next element siblings
+      let listElements = document.querySelectorAll('li');
+      let listElementsArray = Array.from(listElements);
+      let currentIndexNumber;
+      for (let element of listElementsArray) {
+        if (element.className === 'current') {
+          currentIndexNumber = listElementsArray.indexOf(element);
+        }
+      }
+      for (let i = currentIndexNumber; i >= 0; i--) {
+        console.log(listElementsArray[i]);
+      }
+    </script>
+  </body>
+</html>
