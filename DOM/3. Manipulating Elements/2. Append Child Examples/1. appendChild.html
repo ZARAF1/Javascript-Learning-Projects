@@ -8,6 +8,17 @@
   <body>
     <ul id="menu"></ul>
     <script>
+      /*
+        The appendChild() is a method of the Node interface. The appendChild() method allows you to add a node to the end of the list of child nodes of a specified parent node.
+
+        The following illustrates the syntax of the appendChild() method:
+
+        parentNode.appendChild(childNode);
+        Code language: CSS (css)
+        In this method, the childNode is the node to append to the given parent node. The appendChild() returns the appended child.
+
+        If the childNode is a reference to an existing node in the document, the appendChild() method moves the childNode from its current position to the new position.
+      */
       function createListElement(name) {
         let li = document.createElement('li');
         li.textContent = name;

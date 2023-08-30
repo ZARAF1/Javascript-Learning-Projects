@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="note">
+      JavaScript textContent Demo!
+      <span style="display: none">Hidden Text!</span>
+      <!-- my comment -->
+    </div>
+    <script>
+      /**** Getting textContent and innerText */
+      /*textContent*/
+      // To get the text content of a node and its descendants, you use the textContent property:
+      // First, select the div element with the id note by using the getElementById() method.
+      // Then, display the text of the node by accessing the textContent property.
+      let mainDiv = document.querySelector('#note');
+      let noteText = mainDiv.textContent;
+      //JavaScript textContent Demo!
+      // Hidden Text!
+
+      /*innerText*/
+      //On the other hand, the innerText takes the CSS style into account and returns only human-readable text. For example:
+      let innerTextOfDiv = mainDiv.innerText;
+      console.log(innerTextOfDiv); // JavaScript textContent Demo!
+
+      /****Setting textContent and innerText*/
+      // textContent
+      mainDiv.textContent = 'Cowabunga';
+      console.log(mainDiv);
+      // innerText
+      mainDiv.innerText = 'abd';
+      console.log(mainDiv);
+    </script>
+  </body>
+</html>
