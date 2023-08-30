@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // creating list from scratch
+      let ulElement = document.createElement('ul');
+      let liElement = document.createElement('li');
+
+      liElement.id = 'home';
+      liElement.textContent = 'Home';
+      ulElement.appendChild(liElement);
+
+      // adding another list element
+      liElement = document.createElement('li');
+      liElement.id = 'aboutUs';
+      liElement.textContent = 'About Us';
+      ulElement.appendChild(liElement);
+
+      document.body.appendChild(ulElement);
+    </script>
+  </body>
+</html>

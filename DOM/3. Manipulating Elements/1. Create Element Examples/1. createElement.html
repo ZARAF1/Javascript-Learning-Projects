@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Following example uses the document.createElement() to create a new <div> element
+      const division = document.createElement('div');
+      // setting its attributes className, id etc
+      division.id = 'testId';
+      division.className = 'content';
+
+      // setting innerHTML for the div
+      division.innerHTML = '<p>This is a paragraph</p>';
+
+      // setting textContent for the div it will replace the innerHTML and vice versa depends on order
+      division.textContent = 'Some text';
+
+      // create a new text node and add it to the div
+      let text = document.createTextNode('CreateElement example');
+      division.appendChild(text);
+
+      // appending the div to the body
+      document.body.appendChild(division);
+    </script>
+  </body>
+</html>
