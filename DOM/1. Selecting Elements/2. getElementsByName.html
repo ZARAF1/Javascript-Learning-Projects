@@ -42,7 +42,7 @@
 
       btn.addEventListener('click', () => {
         let rates = document.getElementsByName('rate');
-        console.log(rates);
+        // console.log(rates);
         rates.forEach(rate => {
           if (rate.checked) {
             output.innerText = `You have selected: ${rate.value}`;
