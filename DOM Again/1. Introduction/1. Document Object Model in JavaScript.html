@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main">
+      <p>This is a paragraph.</p>
+      <p>This is paragraph two.</p>
+    </div>
+    <script>
+      // getting nodeType element node
+      let pElements = document.getElementsByTagName('p');
+      console.log(pElements[0].innerText === Node.TEXT_NODE);
+      if (pElements[0].nodeType === Node.ELEMENT_NODE) {
+        console.log(pElements[0].nodeValue);
+      }
+
+      console.log(pElements[0].textContent === Node.TEXT_NODE);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Rate the service!!!</h1>
+
+    
+      <label for="poor">
+        <input type="radio" name="survey" value="poor" id="poor" /> Poor</label
+      >
+      <label for="mediocre">
+        <input type="radio" name="survey" value="mediocre" id="mediocre" />
+        Mediocre</label
+      >
+      <label for="excellent">
+        <input type="radio" name="survey" value="excellent" id="excellent" />
+        Excellent</label
+      >
+      <br />
+      <br />
+    </form>
+      <button type="submit" id="btn">Click to Submit</button>
+    
+    <p id="output"></p>
+    <script>
+      // getElementsByName is only present on the document object and not other elements 
+       
+      let output = document.getElementById('output');
+      let btn = document.getElementById('btn');
+
+      btn.addEventListener('click', () => {
+        let inputElements = document.getElementsByName('survey');
+        console.log(inputElements);
+        inputElements.forEach(element => {
+          if (element.checked) {
+            output.innerText = element.value;
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
